@@ -3,6 +3,9 @@ name: Rust Agent Team
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   agent-run:
     runs-on: ubuntu-latest
@@ -10,6 +13,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Install Rust tools
         run: |
