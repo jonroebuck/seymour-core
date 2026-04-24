@@ -1,0 +1,37 @@
+journey:
+  id: cdcp-enrollment
+  title: Enroll in Canada Dental Care Plan
+  expected_outcome: Eligible applicants can complete enrollment and receive next steps.
+
+  preconditions:
+    - Applicant has completed identity verification.
+
+  related_journeys:
+    - id: deny-eligibility
+      relationship: downstream
+      required: false
+      condition: Applicant does not meet eligibility criteria.
+
+  annotations:
+    - kind: open-question
+      status: open
+      text: Confirm eligibility rules for partial coverage.
+
+  steps:
+    - id: capture-eligibility
+      title: Capture eligibility details
+      expected_outcome: Eligibility data is captured correctly.
+
+      preconditions:
+        - Applicant has accepted privacy notice.
+
+      rules:
+        - Applicant must provide required eligibility information.
+
+      errors:
+        - If required information is missing, the user cannot continue.
+
+      annotations:
+        - kind: change-needed
+          status: open
+          text: Update logic if scenario Z is approved.
