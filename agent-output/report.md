@@ -1,5 +1,5 @@
 # Agent Team Report
-Generated: Fri Apr 24 03:49:42 UTC 2026
+Generated: Fri Apr 24 03:56:24 UTC 2026
 
 ## Test Results
 test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
@@ -11,7 +11,7 @@ MISSED   src/error.rs:10:9: replace <impl fmt::Display for SeymourError>::fmt ->
 ::warning file=src/error.rs,line=10,col=9,endLine=12,endCol=10,title=Missed mutant:: replace <impl fmt::Display for SeymourError>::fmt -> fmt::Result with Ok(Default::default())
 MISSED   src/validator.rs:37:27: replace < with <= in validate in 0s build + 0s test
 ::warning file=src/validator.rs,line=37,col=27,endLine=37,endCol=28,title=Missed mutant:: replace < with <= in validate
-7 mutants tested in 14s: 2 missed, 3 caught, 2 unviable
+7 mutants tested in 15s: 2 missed, 3 caught, 2 unviable
 
 ## Coverage
 
@@ -26,13 +26,13 @@ validator.rs                      172                13    92.44%          11   
 TOTAL                             189                22    88.36%          14                 2    85.71%         134                16    88.06%           0                 0         -
 
 ## Lint
-    Checking ryu v1.0.23
-    Checking dyn-clone v1.0.20
+    Checking unsafe-libyaml v0.2.11
     Checking napi-sys v2.4.0
    Compiling serde_derive v1.0.228
    Compiling ctor v0.2.9
    Compiling schemars_derive v0.8.22
+   Compiling cfg-if v1.0.4
     Checking napi v2.16.17
    Compiling napi-derive v2.16.13
     Checking serde_yaml v0.9.34+deprecated
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 9.60s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 9.74s
